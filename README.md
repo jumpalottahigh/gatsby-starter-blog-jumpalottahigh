@@ -3,7 +3,7 @@
 ## Setup
 
 ```
-$ gatsby new PROJECT_NAME https://github.com/jumpalottahigh/gatsby-starter-blog
+$ gatsby new PROJECT_NAME https://github.com/jumpalottahigh/gatsby-starter-blog-jumpalottahigh
 ```
 
 ## Development
