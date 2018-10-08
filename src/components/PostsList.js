@@ -196,9 +196,13 @@ export default class PostsList extends Component {
                           {post.node.frontmatter.ogImage !== null ? (
                             <img
                               src={post.node.frontmatter.ogImage.publicURL}
+                              alt={post.node.frontmatter.title}
                             />
                           ) : (
-                            <img src="/default-ogimage.jpg" />
+                            <img
+                              src="/default-ogimage.jpg"
+                              alt={post.node.frontmatter.title}
+                            />
                           )}
                         </div>
                       )}
@@ -229,6 +233,7 @@ export default class PostsList extends Component {
                         <img
                           src={svgRightArrow}
                           style={{ height: '24px', justifySelf: 'flex-end' }}
+                          alt="Arrow"
                         />
                       )}
                     </div>
@@ -253,9 +258,13 @@ export default class PostsList extends Component {
                           {post.node.frontmatter.ogImage !== null ? (
                             <img
                               src={post.node.frontmatter.ogImage.publicURL}
+                              alt={post.node.frontmatter.title}
                             />
                           ) : (
-                            <img src="/default-ogimage.jpg" />
+                            <img
+                              src="/default-ogimage.jpg"
+                              alt={post.node.frontmatter.title}
+                            />
                           )}
                         </div>
                       )}
@@ -286,6 +295,7 @@ export default class PostsList extends Component {
                         <img
                           src={svgRightArrow}
                           style={{ height: '24px', justifySelf: 'flex-end' }}
+                          alt="Arrow"
                         />
                       )}
                     </div>

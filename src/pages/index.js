@@ -1,26 +1,30 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
 import PostList from '../components/PostsList'
-import Link from 'gatsby-link'
 import Button from '../components/Button'
 
-const IndexPage = ({ data }) => (
-  <div>
-    <p>
-      This blog was a joy to build using <strong>Gatsby 💜</strong> (a React
-      based static site generator) and is hosted on <strong>Firebase 🔥</strong>.
-    </p>
-    <h4 style={{ marginTop: '2rem' }}>Last 5 recent posts:</h4>
-    <PostList
-      showChevron="yes"
-      showImage="yes"
-      showCategories="no"
-      showSearch="no"
-      posts={data.allMarkdownRemark.edges}
-    />
-    <Button style={{ fontSize: '1.2rem', marginRight: '1rem' }} to="/news/">
-      All blog posts
-    </Button>
-  </div>
+const IndexPage = ({ data, location }) => (
+  <Layout location={location}>
+    <div>
+      <p>
+        This blog was a joy to build using <strong>Gatsby 💜</strong> (a React
+        based static site generator) and is hosted on{' '}
+        <strong>Netlify 🔥</strong>.
+      </p>
+      <h4 style={{ marginTop: '2rem' }}>Last 5 recent posts:</h4>
+      <PostList
+        showChevron="yes"
+        showImage="yes"
+        showCategories="no"
+        showSearch="no"
+        posts={data.allMarkdownRemark.edges}
+      />
+      <Button style={{ fontSize: '1.2rem', marginRight: '1rem' }} to="/news/">
+        All blog posts
+      </Button>
+    </div>
+  </Layout>
 )
 
 export default IndexPage

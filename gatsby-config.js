@@ -12,21 +12,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `UA-XXXXXX-X`
-      }
-    },
-    {
-      resolve: `gatsby-plugin-google-tagmanager`,
-      options: {
-        id: 'GTM-XXXXXX',
-        // Include GTM in development.
-        // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: true
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-tagmanager`,
+    //   options: {
+    //     id: 'GTM-XXXXXX',
+    //     // Include GTM in development.
+    //     // Defaults to false meaning GTM will only be loaded in production.
+    //     includeInDevelopment: true
+    //   }
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -63,7 +57,9 @@ module.exports = {
               // If you're unsure, it's best to use the default value.
               classPrefix: 'language-'
             }
-          }
+          },
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants'
         ]
       }
     },
@@ -143,6 +139,7 @@ module.exports = {
           }
         ]
       }
-    }
+    },
+    `gatsby-plugin-offline`
   ]
 }

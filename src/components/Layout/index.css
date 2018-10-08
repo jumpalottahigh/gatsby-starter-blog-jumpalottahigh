@@ -994,22 +994,27 @@ iframe {
 }
 
 .category.all {
+  color: #fff;
   background-color: #86777b;
 }
 
 .category.fpv {
+  color: #fff;
   background-color: #0057e7;
 }
 
 .category.smart.home {
+  color: #000;
   background-color: #ffa700;
 }
 
 .category.software {
+  color: #fff;
   background-color: #d62d20;
 }
 
 .category.general {
+  color: #fff;
   background-color: #008744;
 }
 
