@@ -12,15 +12,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`
     },
-    // {
-    //   resolve: `gatsby-plugin-google-tagmanager`,
-    //   options: {
-    //     id: 'GTM-XXXXXX',
-    //     // Include GTM in development.
-    //     // Defaults to false meaning GTM will only be loaded in production.
-    //     includeInDevelopment: true
-    //   }
-    // },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `XX-XXXXXXXX-X`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -63,7 +60,8 @@ module.exports = {
         ]
       }
     },
-
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-feed`,
       options: {
