@@ -12,17 +12,13 @@ const IndexPage = ({ data, location }) => (
         based static site generator) and is hosted on{' '}
         <strong>Netlify 🔥</strong>.
       </p>
-      <h4 style={{ marginTop: '2rem' }}>Last 5 recent posts:</h4>
       <PostList
         showChevron="yes"
         showImage="yes"
-        showCategories="no"
-        showSearch="no"
+        showCategories="yes"
+        showSearch="yes"
         posts={data.allMarkdownRemark.edges}
       />
-      <Button style={{ fontSize: '1.2rem', marginRight: '1rem' }} to="/news/">
-        All blog posts
-      </Button>
     </div>
   </Layout>
 )
@@ -33,7 +29,6 @@ export const HomePageQuery = graphql`
   query HomePageQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 5
       filter: { frontmatter: { draft: { ne: true } } }
     ) {
       edges {

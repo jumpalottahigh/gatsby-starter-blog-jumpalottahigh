@@ -7,7 +7,6 @@ import './index.css'
 
 import SideBar from '../Sidebar'
 import MenuFAB from '../MenuFAB'
-import logo from '../../images/logo.png'
 import ogImage from '../../../static/default-ogimage.jpg'
 import github from '../../../static/github.svg'
 import twitter from '../../../static/twitter.svg'
@@ -21,8 +20,9 @@ const Header = () => (
   <div
     style={{
       position: 'fixed',
-      borderBottom: '1px solid #0275d8',
       backgroundColor: 'rgba(255,255,255,0.925)',
+      boxShadow:
+        '0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12)',
       height: '3.5rem',
       zIndex: '3',
       left: '0',
@@ -56,24 +56,19 @@ const Header = () => (
             fontSize: '1rem'
           }}
         >
-          <img
-            src={logo}
-            alt="Brand name"
+          <div
             style={{
               height: '2.25rem',
+              width: '2.25rem',
               marginBottom: '0',
-              marginRight: '.5rem'
+              marginRight: '.5rem',
+              borderRadius: '6px',
+              backgroundColor: '#0057e7'
             }}
           />
-          Brand name
+          My blog
         </h1>
       </Link>
-
-      <ul className="nav">
-        <li>
-          <Link to="/news/">Blog posts</Link>
-        </li>
-      </ul>
       <ul className="nav social">
         <li>
           <a
